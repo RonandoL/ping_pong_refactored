@@ -1,13 +1,22 @@
 class Fixnum
   define_method(:ping_pong) do
-    number = self
+    number = self.abs
     num_array = []
-    ping = "ping"
-    pong = "pong"
+    # these variables are to make it allow future developers to easily change
+    # the targeted numbers and the replacement string output on demand.
+    a = "ping"
+    b = "pong"
+    ab = "ping-pong"
+    num_a = 3
+    num_b = 5
 
     1.upto(number) do |i|
-      if (i % 3 == 0)
-        num_array.push(ping)
+      if (i % num_a == 0) and (i % num_b == 0)
+        num_array.push(ab)
+      elsif (i % 3 == 0)
+        num_array.push(a)
+      elsif (i % 5 == 0)
+        num_array.push(b)
       else
         num_array.push(i)
       end
