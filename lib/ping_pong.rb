@@ -10,8 +10,10 @@ class Fixnum
     num_a = 3
     num_b = 5
 
-    1.upto(number) do |i|
-      if (i % num_a == 0) and (i % num_b == 0)
+    0.upto(number) do |i|
+      if i == 0
+        num_array.push(0)
+      elsif (i % num_a == 0) and (i % num_b == 0)
         num_array.push(ab)
       elsif (i % 3 == 0)
         num_array.push(a)
