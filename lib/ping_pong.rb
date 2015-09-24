@@ -15,9 +15,9 @@ class Fixnum
         num_array.push(0)
       elsif (i % num_a == 0) and (i % num_b == 0)
         num_array.push(ab)
-      elsif (i % 3 == 0)
+      elsif (i % num_a == 0)
         num_array.push(a)
-      elsif (i % 5 == 0)
+      elsif (i % num_b == 0)
         num_array.push(b)
       else
         num_array.push(i)
